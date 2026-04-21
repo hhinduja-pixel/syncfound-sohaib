@@ -31,7 +31,7 @@ const Chat = () => {
   const [matchedUser, setMatchedUser] = useState<MatchedUser | null>(null);
   const [isTyping, setIsTyping] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
-  const typingTimeoutRef = useRef<NodeJS.Timeout | null>(null);
+  const typingTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const presenceChannelRef = useRef<any>(null);
   const navigate = useNavigate();
   const { toast } = useToast();
